@@ -7,6 +7,7 @@ package hrpc
 
 import (
 	"context"
+	"strings"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/tsuna/gohbase/pb"
@@ -35,11 +36,11 @@ func (dt *DeleteTable) Name() string {
 
 // ToProto converts the RPC into a protobuf message
 func (dt *DeleteTable) ToProto() (proto.Message, error) {
+	table := strings.Split("default:"+string(dt.table), ":")
 	return &pb.DeleteTableRequest{
 		TableName: &pb.TableName{
-			// TODO: hadle namespaces properly
-			Namespace: []byte("default"),
-			Qualifier: dt.table,
+			Namespace: []byte(table[len(table)-2]),
+			Qualifier: []byte(table[len(table)-1]),
 		},
 	}, nil
 }

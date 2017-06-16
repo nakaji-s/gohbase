@@ -7,6 +7,7 @@ package hrpc
 
 import (
 	"context"
+	"strings"
 
 	"github.com/golang/protobuf/proto"
 	"github.com/tsuna/gohbase/pb"
@@ -79,12 +80,12 @@ func (ct *CreateTable) ToProto() (proto.Message, error) {
 		}
 		pbFamilies = append(pbFamilies, f)
 	}
+	table := strings.Split("default:"+string(ct.table), ":")
 	return &pb.CreateTableRequest{
 		TableSchema: &pb.TableSchema{
 			TableName: &pb.TableName{
-				// TODO: handle namespaces
-				Namespace: []byte("default"),
-				Qualifier: ct.table,
+				Namespace: []byte(table[len(table)-2]),
+				Qualifier: []byte(table[len(table)-1]),
 			},
 			ColumnFamilies: pbFamilies,
 		},
