@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/tsuna/gohbase/hrpc"
+	"github.com/nakaji-s/gohbase/hrpc"
 )
 
 // NewClient creates a new RegionClient.

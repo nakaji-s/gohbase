@@ -10,10 +10,10 @@ import (
 	"fmt"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/tsuna/gohbase/hrpc"
-	"github.com/tsuna/gohbase/pb"
-	"github.com/tsuna/gohbase/region"
-	"github.com/tsuna/gohbase/zk"
+	"github.com/nakaji-s/gohbase/hrpc"
+	"github.com/nakaji-s/gohbase/pb"
+	"github.com/nakaji-s/gohbase/region"
+	"github.com/nakaji-s/gohbase/zk"
 )
 
 // AdminClient to perform admistrative operations with HMaster

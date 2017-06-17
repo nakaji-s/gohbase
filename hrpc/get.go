@@ -10,8 +10,8 @@ import (
 	"fmt"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/tsuna/gohbase/filter"
-	"github.com/tsuna/gohbase/pb"
+	"github.com/nakaji-s/gohbase/filter"
+	"github.com/nakaji-s/gohbase/pb"
 )
 
 // Get represents a Get HBase call.

@@ -16,8 +16,8 @@ import (
 	"unsafe"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/tsuna/gohbase/filter"
-	"github.com/tsuna/gohbase/pb"
+	"github.com/nakaji-s/gohbase/filter"
+	"github.com/nakaji-s/gohbase/pb"
 )
 
 // RegionInfo represents HBase region.

@@ -21,8 +21,8 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/tsuna/gohbase"
-	"github.com/tsuna/gohbase/hrpc"
+	"github.com/nakaji-s/gohbase"
+	"github.com/nakaji-s/gohbase/hrpc"
 )
 
 var host = flag.String("host", "localhost", "The location where HBase is running")

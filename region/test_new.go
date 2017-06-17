@@ -14,8 +14,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/tsuna/gohbase/hrpc"
-	"github.com/tsuna/gohbase/pb"
+	"github.com/nakaji-s/gohbase/hrpc"
+	"github.com/nakaji-s/gohbase/pb"
 )
 
 type testClient struct {

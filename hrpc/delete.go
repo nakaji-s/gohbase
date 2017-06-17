@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/tsuna/gohbase/pb"
+	"github.com/nakaji-s/gohbase/pb"
 )
 
 // DeleteTable represents a DeleteTable HBase call

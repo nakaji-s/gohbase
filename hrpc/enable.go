@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/tsuna/gohbase/pb"
+	"github.com/nakaji-s/gohbase/pb"
 )
 
 // EnableTable represents a EnableTable HBase call
